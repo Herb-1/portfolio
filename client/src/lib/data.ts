@@ -12,7 +12,7 @@ export const personalInfo = {
   ],
   email: "Shabbydream01@gmail.com",
   location: "Toronto, CAN",
-  profileImageUrl: "/images/your-avatar.jpg",
+  profileImageUrl: "/your-avatar.jpg",
   socialLinks: [
     {
       platform: "Facebook",
@@ -70,7 +70,7 @@ export const projects = [
     description:
       "A fully functional e-commerce website with product catalog, shopping cart, and payment integration.",
     technologies: ["React", "Node.js", "MongoDB"],
-    imageUrl: "/images/placeholder.svg",
+    imageUrl: "/placeholder.svg",
     projectUrl: "#",
   },
   {
@@ -78,7 +78,7 @@ export const projects = [
     description:
       "An interactive dashboard for tracking expenses, income, and investment performance.",
     technologies: ["Vue.js", "Firebase", "D3.js"],
-    imageUrl: "/images/placeholder.svg",
+    imageUrl: "/placeholder.svg",
     projectUrl: "#",
   },
   {
@@ -86,7 +86,7 @@ export const projects = [
     description:
       "A weather application that provides real-time forecasts for any location worldwide.",
     technologies: ["JavaScript", "Weather API", "CSS3"],
-    imageUrl: "/images/placeholder.svg",
+    imageUrl: "/placeholder.svg",
     projectUrl: "#",
   },
 ];
