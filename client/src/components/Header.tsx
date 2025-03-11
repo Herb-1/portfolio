@@ -35,12 +35,12 @@ export function Header() {
 
   return (
     <header className={`fixed w-full z-50 transition-all duration-300 ${
-      isScrolled ? "bg-white shadow-sm" : "bg-transparent"
+      isScrolled ? "bg-white/90 backdrop-blur-sm shadow-sm" : "bg-transparent"
     }`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo / Name */}
-          <a href="#home" className="text-xl font-bold text-primary">
+          <a href="#home" className="text-xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
             {personalInfo.name}
           </a>
           
@@ -62,7 +62,7 @@ export function Header() {
           
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-tertiary focus:outline-none" 
+            className="md:hidden text-tertiary hover:text-primary focus:outline-none transition-colors" 
             onClick={toggleMobileMenu}
             aria-label="Toggle menu"
           >

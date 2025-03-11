@@ -25,13 +25,13 @@ export function MobileMenu() {
 
   return (
     <div 
-      className={`md:hidden fixed inset-0 bg-white z-40 transform transition-transform duration-300 ease-in-out ${
+      className={`md:hidden fixed inset-0 bg-black/90 backdrop-blur-md z-40 transform transition-transform duration-300 ease-in-out ${
         isOpen ? "translate-y-0" : "-translate-y-full"
       }`}
     >
       <div className="container mx-auto px-4 pt-20 pb-8">
         <button 
-          className="absolute top-4 right-4 text-tertiary focus:outline-none"
+          className="absolute top-4 right-4 text-white hover:text-primary focus:outline-none transition-colors"
           onClick={closeMobileMenu}
           aria-label="Close menu"
         >
@@ -41,28 +41,28 @@ export function MobileMenu() {
         <nav className="flex flex-col space-y-6">
           <a 
             href="#home" 
-            className="text-tertiary hover:text-primary text-lg font-medium transition-colors duration-200"
+            className="text-white hover:text-primary text-lg font-medium transition-colors duration-200"
             onClick={closeMobileMenu}
           >
             Home
           </a>
           <a 
             href="#about" 
-            className="text-tertiary hover:text-primary text-lg font-medium transition-colors duration-200"
+            className="text-white hover:text-primary text-lg font-medium transition-colors duration-200"
             onClick={closeMobileMenu}
           >
             About
           </a>
           <a 
             href="#projects" 
-            className="text-tertiary hover:text-primary text-lg font-medium transition-colors duration-200"
+            className="text-white hover:text-primary text-lg font-medium transition-colors duration-200"
             onClick={closeMobileMenu}
           >
             Projects
           </a>
           <a 
             href="#contact" 
-            className="text-tertiary hover:text-primary text-lg font-medium transition-colors duration-200"
+            className="text-white hover:text-primary text-lg font-medium transition-colors duration-200"
             onClick={closeMobileMenu}
           >
             Contact
