@@ -12,7 +12,7 @@ export const personalInfo = {
   ],
   email: "Shabbydream01@gmail.com",
   location: "Toronto, CAN",
-  profileImageUrl: "/images/avatar-placeholder.svg",
+  profileImageUrl: "/images/your-avatar.jpg",
   socialLinks: [
     {
       platform: "Facebook",
@@ -86,8 +86,7 @@ export const projects = [
     description:
       "A weather application that provides real-time forecasts for any location worldwide.",
     technologies: ["JavaScript", "Weather API", "CSS3"],
-    imageUrl:
-      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    imageUrl: "/images/placeholder.svg",
     projectUrl: "#",
   },
 ];
