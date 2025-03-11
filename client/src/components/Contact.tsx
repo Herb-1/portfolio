@@ -63,7 +63,9 @@ export function Contact() {
   return (
     <section id="contact" className="section py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-6 text-center">Get In Touch</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-6 text-center">
+          <span className="bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">Get In Touch</span>
+        </h2>
         <div className="w-20 h-1 bg-primary mx-auto mb-10"></div>
         
         <div className="max-w-4xl mx-auto">
@@ -191,7 +193,7 @@ export function Contact() {
                   
                   <Button 
                     type="submit" 
-                    className="bg-primary hover:bg-blue-600 text-white font-medium py-2 px-6 rounded-lg transition-colors duration-200"
+                    className="bg-primary hover:bg-blue-600 text-white font-medium py-2 px-6 rounded-lg transition-all duration-200 hover:shadow-lg hover:scale-[1.02]"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? "Sending..." : "Send Message"}
