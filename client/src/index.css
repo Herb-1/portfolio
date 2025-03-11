@@ -14,7 +14,7 @@
 
 /* Thêm tùy chỉnh cho phần nền */
 .hero-background {
-  background-image: url('/images/background.jpg'); /* Thay background.jpg bằng tên file ảnh nền của bạn */
+  background-image: url('/images/placeholder.svg'); /* Thay background.jpg bằng tên file ảnh nền của bạn */
   background-size: cover;
   background-position: center;
   position: relative;

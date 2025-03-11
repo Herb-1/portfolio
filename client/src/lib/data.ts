@@ -2,7 +2,7 @@
 
 export const personalInfo = {
   name: "Panadora",
-  headline: "Web Developer & Designer & AI datalist ( Bốc Phét thoi )",
+  headline: "Web Developer & Designer & AI datalist ( Bốc Phét thoi",
   shortBio:
     "I create beautiful, functional websites and applications. Welcome to my personal space where I showcase my work and share my journey.",
   aboutMe: [
@@ -12,7 +12,7 @@ export const personalInfo = {
   ],
   email: "Shabbydream01@gmail.com",
   location: "Toronto, CAN",
-  profileImageUrl: "/images/your-avatar.jpg", // Thay your-avatar.jpg bằng tên file ảnh của bạn
+  profileImageUrl: "/images/avatar-placeholder.svg",
   socialLinks: [
     {
       platform: "Facebook",
@@ -70,8 +70,7 @@ export const projects = [
     description:
       "A fully functional e-commerce website with product catalog, shopping cart, and payment integration.",
     technologies: ["React", "Node.js", "MongoDB"],
-    imageUrl:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    imageUrl: "/images/placeholder.svg",
     projectUrl: "#",
   },
   {
@@ -79,8 +78,7 @@ export const projects = [
     description:
       "An interactive dashboard for tracking expenses, income, and investment performance.",
     technologies: ["Vue.js", "Firebase", "D3.js"],
-    imageUrl:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1415&q=80",
+    imageUrl: "/images/placeholder.svg",
     projectUrl: "#",
   },
   {
