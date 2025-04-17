@@ -47,7 +47,9 @@ export function Contact() {
         body: JSON.stringify(data),
       });
       
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
       
       toast({
         title: "Success",
