@@ -10,7 +10,6 @@ import { useToast } from "@/hooks/use-toast";
 import { SocialIcon } from "./SocialIcon";
 import { personalInfo } from "@/lib/data";
 import { FaPhone, FaCommentDots, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 // Contact form schema
 const contactFormSchema = z.object({
