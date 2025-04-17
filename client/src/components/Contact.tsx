@@ -35,11 +35,18 @@ export function Contact() {
     }
   });
 
-  const onSubmit = async (values: z.infer<typeof contactFormSchema>) => {
+  const onSubmit = async (data: ContactFormValues) => {
     setIsSubmitting(true);
     
     try {
-      // Since we don't have a backend yet, we'll simulate a successful submission
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+      
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       toast({

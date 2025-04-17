@@ -1,16 +1,30 @@
-import { personalInfo } from "@/lib/data";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
-const Footer = () => {
+export const Footer = () => {
   return (
-    <footer className="bg-secondary py-8">
+    <footer className="bg-secondary text-white py-8">
       <div className="container mx-auto px-4">
-        <div className="text-center text-secondary-foreground">
-          <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="mb-4 md:mb-0">
+            <h3 className="text-xl font-bold">Herb</h3>
+            <p className="text-sm mt-2">Full Stack Developer</p>
+          </div>
+          <div className="flex space-x-4">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary">
+              <FaGithub size={24} />
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary">
+              <FaLinkedin size={24} />
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary">
+              <FaTwitter size={24} />
+            </a>
+          </div>
+        </div>
+        <div className="mt-8 text-center text-sm">
+          <p>© {new Date().getFullYear()} Herb. All rights reserved.</p>
         </div>
       </div>
     </footer>
   );
 };
-
-export default Footer;
