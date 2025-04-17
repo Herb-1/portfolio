@@ -1,7 +1,6 @@
 import type { Express, Request, Response } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
-import path from "path";
 
 interface ContactFormData {
   name: string;
@@ -33,8 +32,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       if (!name || !email || !subject || !message) {
         return res.status(400).json({ 
           status: 'error',
-          message: 'All fields are required',
-          fields: { name, email, subject, message }
+          message: 'All fields are required'
         });
       }
 
@@ -47,23 +45,18 @@ export async function registerRoutes(app: Express): Promise<Server> {
         });
       }
       
-      // In a real app, you would process the contact form here
-      // e.g., send an email, store in database, etc.
-      
-      // Simulate processing delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Store the contact form data
+      await storage.set(`contact:${Date.now()}`, { name, email, subject, message });
       
       return res.status(200).json({ 
         status: 'success',
-        message: 'Message received successfully',
-        data: { name, email, subject }
+        message: 'Message received successfully'
       });
     } catch (error) {
       console.error('Contact form error:', error);
       res.status(500).json({
         status: 'error',
-        message: 'Failed to process contact form',
-        error: process.env.NODE_ENV === 'development' ? error : undefined
+        message: 'Failed to process contact form'
       });
     }
   });

@@ -1,6 +1,10 @@
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
+import dotenv from "dotenv";
+
+// Load environment variables
+dotenv.config();
 
 const app = express();
 app.use(express.json());
@@ -59,7 +63,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
   });
 
   if (process.env.NODE_ENV === 'development') {
-    await setupVite(app, server);
+    await setupVite(app);
   } else {
     serveStatic(app);
   }

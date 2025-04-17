@@ -9,7 +9,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { SocialIcon } from "./SocialIcon";
 import { personalInfo } from "@/lib/data";
-import { apiRequest } from "@/lib/queryClient";
 import { FaPhone, FaCommentDots, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 // Contact form schema
@@ -26,7 +25,6 @@ export function Contact() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   
-  // Initialize form
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
@@ -37,23 +35,22 @@ export function Contact() {
     }
   });
 
-  // Handle form submission
-  const onSubmit = async (data: ContactFormValues) => {
+  const onSubmit = async (values: z.infer<typeof contactFormSchema>) => {
     setIsSubmitting(true);
     
     try {
-      // This would normally send data to an API endpoint
-      // In this case, we're just showing a success message
-      toast({
-        title: "Message Sent!",
-        description: "Thank you for your message. I'll get back to you soon!",
-      });
+      // Since we don't have a backend yet, we'll simulate a successful submission
+      await new Promise(resolve => setTimeout(resolve, 1000));
       
+      toast({
+        title: "Success",
+        description: "Your message has been sent successfully!",
+      });
       form.reset();
     } catch (error) {
       toast({
         title: "Error",
-        description: "Failed to send message. Please try again later.",
+        description: "Something went wrong. Please try again later.",
         variant: "destructive",
       });
     } finally {

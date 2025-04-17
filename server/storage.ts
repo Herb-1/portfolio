@@ -1,4 +1,41 @@
+import fs from "fs/promises";
+import path from "path";
+import { fileURLToPath } from "url";
 import { users, type User, type InsertUser } from "@shared/schema";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const DATA_DIR = path.join(__dirname, "../data");
+
+interface StorageData {
+  [key: string]: any;
+}
+
+// Simple in-memory storage implementation
+class Storage {
+  private data: Map<string, any>;
+
+  constructor() {
+    this.data = new Map();
+  }
+
+  async get(key: string): Promise<any> {
+    return this.data.get(key);
+  }
+
+  async set(key: string, value: any): Promise<void> {
+    this.data.set(key, value);
+  }
+
+  async delete(key: string): Promise<boolean> {
+    return this.data.delete(key);
+  }
+
+  async clear(): Promise<void> {
+    this.data.clear();
+  }
+}
+
+export const storage = new Storage();
 
 // modify the interface with any CRUD methods
 // you might need
@@ -144,4 +181,4 @@ export class MemStorage implements IStorage {
   }
 }
 
-export const storage = new MemStorage();
+export const memStorage = new MemStorage();
