@@ -2,39 +2,30 @@
 
 export const personalInfo = {
   name: "Panadora",
-  headline: "Web Developer & Designer & AI datalist ( Bốc Phét thoi",
-  shortBio:
-    "I create beautiful, functional websites and applications. Welcome to my personal space where I showcase my work and share my journey.",
-  aboutMe: [
-    "chả có cái vẹo gì ở đây",
-    "Web mới build chưa có gì đâu",
-    "Đang Thử test",
-  ],
+  headline: "Web Developer & Designer & AI datalist ( Bốc Phét thoi )",
+  shortBio: "Chả có cái vẹo gì cả , tại không có cái gì để viết cả.",
+  role: "Full Stack Developer",
   email: "Shabbydream01@gmail.com",
-  location: "Toronto, CAN",
+  phone: "0559099491",
+  zalo: "0559099491",
+  location: "Ở NHÀ TAOOO",
   profileImageUrl: "/your-avatar.jpg",
+  aboutMe: [
+    "I'm a passionate Full Stack Developer with expertise in building modern web applications. I love creating intuitive user interfaces and robust backend systems.",
+    "With experience in both frontend and backend development, I enjoy solving complex problems and turning ideas into reality through code.",
+    "When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good cup of coffee while reading tech blogs.",
+    "Những cái trên tao bốc phét đó."
+  ],
   socialLinks: [
     {
       platform: "Facebook",
-      url: "https://facebook.com",
-    },
-    {
-      platform: "Twitter",
-      url: "https://twitter.com",
-    },
-    {
-      platform: "LinkedIn",
-      url: "https://linkedin.com",
+      url: "https://www.facebook.com/QUts.Deraz"
     },
     {
       platform: "Instagram",
-      url: "https://instagram.com",
-    },
-    {
-      platform: "GitHub",
-      url: "https://github.com",
-    },
-  ],
+      url: "https://www.instagram.com/quts.deraz"
+    }
+  ]
 };
 
 export const skills = [
@@ -45,6 +36,18 @@ export const skills = [
   {
     name: "JavaScript",
     icon: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M0 0h16v16H0V0zm14.69 12.184c-.117-.73-.593-1.346-2.009-1.921-.495-.228-1.046-.38-1.209-.741-.061-.15-.072-.232-.03-.323.101-.262.606-.243.994-.19.253.034.489.127.686.273l.813-.512c-.195-.3-.494-.536-.873-.66-.256-.086-.593-.094-.888-.069-.374.125-.727.318-.89.678-.191.462-.134 1.117.224 1.415.335.255.755.404 1.1.573.092.047.166.105.218.185a.456.456 0 0 1-.12.65c-.309.22-.842.142-1.193.041a1.614 1.614 0 0 1-.84-.67L8 11.57a2.104 2.104 0 0 0 .512.66c.327.275.737.493 1.224.603.414.09.851.08 1.294-.013.47-.122.882-.38 1.125-.731.258-.396.312-.9.236-1.375zm-6.1-6.32h-1.246c0 1.198-.005 2.393-.006 3.592 0 .77-.03 1.475.085 1.693.183.399.616.368 1.07.21.113-.043.179-.092.232-.133l.07-.066.143-.138-.024-.63c-.147.106-.307.2-.502.166-.27-.047-.255-.309-.254-.673l.003-4.022h1.08V4.82H8.592l.001-1.956z"/></svg>',
+  },
+  {
+    name: "Python",
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>',
+  },
+  {
+    name: "Java",
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M2.5 15a.5.5 0 1 1 0-1h11a.5.5 0 0 1 0 1h-11zm-1-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm1-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm1-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/></svg>',
+  },
+  {
+    name: "Bốc Phét",
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm-3 4a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zM10 8c-.552 0-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5S10.552 8 10 8z"/></svg>',
   },
   {
     name: "React",
@@ -86,6 +89,30 @@ export const projects = [
     description:
       "A weather application that provides real-time forecasts for any location worldwide.",
     technologies: ["JavaScript", "Weather API", "CSS3"],
+    imageUrl: "/placeholder.svg",
+    projectUrl: "#",
+  },
+  {
+    title: "Task Management App",
+    description:
+      "A productivity application for managing tasks, deadlines, and team collaboration.",
+    technologies: ["React", "TypeScript", "Firebase"],
+    imageUrl: "/placeholder.svg",
+    projectUrl: "#",
+  },
+  {
+    title: "Social Media Dashboard",
+    description:
+      "A comprehensive dashboard for managing multiple social media accounts and analyzing engagement metrics.",
+    technologies: ["Next.js", "Tailwind CSS", "REST API"],
+    imageUrl: "/placeholder.svg",
+    projectUrl: "#",
+  },
+  {
+    title: "AI Image Generator",
+    description:
+      "An application that generates unique images using artificial intelligence based on text prompts.",
+    technologies: ["Python", "TensorFlow", "React"],
     imageUrl: "/placeholder.svg",
     projectUrl: "#",
   },

@@ -2,8 +2,19 @@ import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
-  content: ["./client/index.html", "./client/src/**/*.{js,jsx,ts,tsx}"],
+  content: [
+    "./client/index.html",
+    "./client/src/**/*.{js,jsx,ts,tsx}",
+    "./shared/**/*.{js,jsx,ts,tsx}"
+  ],
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
     extend: {
       borderRadius: {
         lg: "var(--radius)",
@@ -79,12 +90,118 @@ export default {
             height: "0",
           },
         },
+        "collapsible-down": {
+          from: {
+            height: "0",
+          },
+          to: {
+            height: "var(--radix-collapsible-content-height)",
+          },
+        },
+        "collapsible-up": {
+          from: {
+            height: "var(--radix-collapsible-content-height)",
+          },
+          to: {
+            height: "0",
+          },
+        },
+        "fade-in": {
+          from: {
+            opacity: "0",
+          },
+          to: {
+            opacity: "1",
+          },
+        },
+        "fade-out": {
+          from: {
+            opacity: "1",
+          },
+          to: {
+            opacity: "0",
+          },
+        },
+        "slide-in": {
+          from: {
+            transform: "translateY(100%)",
+          },
+          to: {
+            transform: "translateY(0)",
+          },
+        },
+        "slide-out": {
+          from: {
+            transform: "translateY(0)",
+          },
+          to: {
+            transform: "translateY(100%)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "collapsible-down": "collapsible-down 0.2s ease-out",
+        "collapsible-up": "collapsible-up 0.2s ease-out",
+        "fade-in": "fade-in 0.2s ease-out",
+        "fade-out": "fade-out 0.2s ease-out",
+        "slide-in": "slide-in 0.2s ease-out",
+        "slide-out": "slide-out 0.2s ease-out",
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: '65ch',
+            color: 'hsl(var(--foreground))',
+            '[class~="lead"]': {
+              color: 'hsl(var(--foreground))',
+            },
+            a: {
+              color: 'hsl(var(--primary))',
+              '&:hover': {
+                color: 'hsl(var(--primary-foreground))',
+              },
+            },
+            strong: {
+              color: 'hsl(var(--foreground))',
+            },
+            'ol[type="A"]': {
+              '--list-counter-style': 'upper-alpha',
+            },
+            'ol[type="a"]': {
+              '--list-counter-style': 'lower-alpha',
+            },
+            'ol[type="A" s]': {
+              '--list-counter-style': 'upper-alpha',
+            },
+            'ol[type="a" s]': {
+              '--list-counter-style': 'lower-alpha',
+            },
+            'ol[type="I"]': {
+              '--list-counter-style': 'upper-roman',
+            },
+            'ol[type="i"]': {
+              '--list-counter-style': 'lower-roman',
+            },
+            'ol[type="I" s]': {
+              '--list-counter-style': 'upper-roman',
+            },
+            'ol[type="i" s]': {
+              '--list-counter-style': 'lower-roman',
+            },
+            'ol[type="1"]': {
+              '--list-counter-style': 'decimal',
+            },
+          },
+        },
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/aspect-ratio"),
+  ],
 } satisfies Config;

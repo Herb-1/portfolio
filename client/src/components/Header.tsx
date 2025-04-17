@@ -35,7 +35,7 @@ export function Header() {
 
   return (
     <header className={`fixed w-full z-50 transition-all duration-300 ${
-      isScrolled ? "bg-white/90 backdrop-blur-sm shadow-sm" : "bg-transparent"
+      isScrolled ? "bg-background/90 backdrop-blur-sm shadow-sm" : "bg-transparent"
     }`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
@@ -46,23 +46,23 @@ export function Header() {
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#home" className="text-tertiary hover:text-primary font-medium transition-colors duration-200">
+            <a href="#home" className="text-muted-foreground hover:text-primary font-medium transition-colors duration-200">
               Home
             </a>
-            <a href="#about" className="text-tertiary hover:text-primary font-medium transition-colors duration-200">
+            <a href="#about" className="text-muted-foreground hover:text-primary font-medium transition-colors duration-200">
               About
             </a>
-            <a href="#projects" className="text-tertiary hover:text-primary font-medium transition-colors duration-200">
+            <a href="#projects" className="text-muted-foreground hover:text-primary font-medium transition-colors duration-200">
               Projects
             </a>
-            <a href="#contact" className="text-tertiary hover:text-primary font-medium transition-colors duration-200">
+            <a href="#contact" className="text-muted-foreground hover:text-primary font-medium transition-colors duration-200">
               Contact
             </a>
           </nav>
           
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-tertiary hover:text-primary focus:outline-none transition-colors" 
+            className="md:hidden text-muted-foreground hover:text-primary focus:outline-none transition-colors" 
             onClick={toggleMobileMenu}
             aria-label="Toggle menu"
           >

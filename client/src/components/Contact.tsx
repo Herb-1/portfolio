@@ -10,6 +10,7 @@ import { useToast } from "@/hooks/use-toast";
 import { SocialIcon } from "./SocialIcon";
 import { personalInfo } from "@/lib/data";
 import { apiRequest } from "@/lib/queryClient";
+import { FaPhone, FaCommentDots, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 // Contact form schema
 const contactFormSchema = z.object({
@@ -61,9 +62,9 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="section py-20 bg-white">
+    <section id="contact" className="section py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-6 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-center">
           <span className="bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">Get In Touch</span>
         </h2>
         <div className="w-20 h-1 bg-primary mx-auto mb-10"></div>
@@ -71,16 +72,38 @@ export function Contact() {
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div>
-              <h3 className="text-2xl font-semibold text-secondary mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-semibold text-foreground mb-6">Contact Information</h3>
               
               <div className="space-y-4">
                 <div className="flex items-start">
                   <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center bg-primary/10 rounded-lg text-primary mr-3">
-                    <i className="envelope-icon"></i>
+                    <FaPhone className="w-5 h-5" />
                   </div>
                   <div>
-                    <p className="text-sm text-tertiary mb-1">Email</p>
-                    <a href={`mailto:${personalInfo.email}`} className="text-secondary hover:text-primary transition-colors duration-200">
+                    <p className="text-sm text-muted-foreground mb-1">Phone</p>
+                    <a href={`tel:${personalInfo.phone}`} className="text-foreground hover:text-primary transition-colors duration-200">
+                      {personalInfo.phone}
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center bg-primary/10 rounded-lg text-primary mr-3">
+                    <FaCommentDots className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted-foreground mb-1">Zalo</p>
+                    <p className="text-foreground">{personalInfo.zalo}</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center bg-primary/10 rounded-lg text-primary mr-3">
+                    <FaEnvelope className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted-foreground mb-1">Email</p>
+                    <a href={`mailto:${personalInfo.email}`} className="text-foreground hover:text-primary transition-colors duration-200">
                       {personalInfo.email}
                     </a>
                   </div>
@@ -88,17 +111,17 @@ export function Contact() {
                 
                 <div className="flex items-start">
                   <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center bg-primary/10 rounded-lg text-primary mr-3">
-                    <i className="location-icon"></i>
+                    <FaMapMarkerAlt className="w-5 h-5" />
                   </div>
                   <div>
-                    <p className="text-sm text-tertiary mb-1">Location</p>
-                    <p className="text-secondary">{personalInfo.location}</p>
+                    <p className="text-sm text-muted-foreground mb-1">Location</p>
+                    <p className="text-foreground">{personalInfo.location}</p>
                   </div>
                 </div>
               </div>
               
               <div className="mt-10">
-                <h3 className="text-xl font-semibold text-secondary mb-4">Connect With Me</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-4">Connect With Me</h3>
                 
                 <div className="flex space-x-4">
                   {personalInfo.socialLinks.map((social, index) => (
@@ -113,7 +136,7 @@ export function Contact() {
             </div>
             
             <div>
-              <h3 className="text-2xl font-semibold text-secondary mb-6">Send Me a Message</h3>
+              <h3 className="text-2xl font-semibold text-foreground mb-6">Send Me a Message</h3>
               
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">

@@ -32,5 +32,34 @@ export default defineConfig({
   build: {
     outDir: path.resolve(__dirname, "dist/public"),
     emptyOutDir: true,
+    minify: 'terser',
+    sourcemap: process.env.NODE_ENV !== 'production',
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          radix: [
+            '@radix-ui/react-dialog',
+            '@radix-ui/react-dropdown-menu',
+            '@radix-ui/react-slot',
+            '@radix-ui/react-toast'
+          ]
+        },
+      },
+    },
+  },
+  server: {
+    port: 3000,
+    strictPort: true,
+    hmr: {
+      overlay: true,
+    },
+  },
+  preview: {
+    port: 5000,
+    strictPort: true,
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom'],
   },
 });

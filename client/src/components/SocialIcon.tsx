@@ -3,7 +3,9 @@ import {
   FaTwitter, 
   FaLinkedinIn, 
   FaInstagram, 
-  FaGithub 
+  FaGithub,
+  FaPhone,
+  FaCommentDots
 } from "react-icons/fa";
 
 interface SocialIconProps {
@@ -39,6 +41,16 @@ export function SocialIcon({ platform, url }: SocialIconProps) {
         return { 
           icon: <FaGithub />, 
           bgColor: 'bg-[#333333]' 
+        };
+      case 'zalo':
+        return {
+          icon: <FaCommentDots />,
+          bgColor: 'bg-[#0068FF]'
+        };
+      case 'phone':
+        return {
+          icon: <FaPhone />,
+          bgColor: 'bg-[#25D366]'
         };
       default:
         return { 
