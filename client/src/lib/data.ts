@@ -5,11 +5,14 @@ export const personalInfo = {
   headline: "Web Developer & Designer & AI datalist ( Bốc Phét thoi )",
   shortBio: "Chả có cái vẹo gì cả , tại không có cái gì để viết cả.",
   role: "Full Stack Developer",
+  description:
+    "A passionate Full Stack Developer based in Vietnam. I am always eager to learn new technologies and create innovative solutions.",
+  location: "Ở NHÀ TAOOO",
   email: "Shabbydream01@gmail.com",
+  availability: "Open for opportunities",
   phone: "0559099491",
   zalo: "0559099491",
-  location: "Ở NHÀ TAOOO",
-  profileImageUrl: "/your-avatar.jpg",
+  profileImageUrl: "/jerry-avatar.jpg",
   aboutMe: [
     "I'm a passionate Full Stack Developer with expertise in building modern web applications. I love creating intuitive user interfaces and robust backend systems.",
     "With experience in both frontend and backend development, I enjoy solving complex problems and turning ideas into reality through code.",
