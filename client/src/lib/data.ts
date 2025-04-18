@@ -12,7 +12,7 @@ export const personalInfo = {
   availability: "Open for opportunities",
   phone: "0559099491",
   zalo: "0559099491",
-  profileImageUrl: "/images/your-avatar.jpg",
+  profileImageUrl: "/images/jerry-avatar.jpg",
   aboutMe: [
     "I'm a passionate Full Stack Developer with expertise in building modern web applications. I love creating intuitive user interfaces and robust backend systems.",
     "With experience in both frontend and backend development, I enjoy solving complex problems and turning ideas into reality through code.",
