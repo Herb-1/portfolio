@@ -1,8 +1,11 @@
 [build]
   base = "client"
-  command = "CI=false npm ci && CI=false npm run build"
+  command = "npm i && npm run build"
   publish = "dist"
-  environment = { NODE_VERSION = "18", CI = "false" }
+
+[build.environment]
+  NODE_VERSION = "18"
+  NPM_FLAGS = "--no-audit --no-fund"
 
 [[redirects]]
   from = "/*"
