@@ -1,61 +1,70 @@
 import { useEffect } from "react";
 import { Header } from "./components/Header";
-import { MobileMenu } from "./components/MobileMenu";
 import { Hero } from "./components/Hero";
 import { About } from "./components/About";
 import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import Footer from "./components/Footer";
+import { ParticleBackground } from "./components/ParticleBackground";
+import { AnimatedBackground } from "./components/AnimatedBackground";
+import { ScrollProgress } from "./components/ScrollProgress";
 import { Toaster } from "@/components/ui/toaster";
-import { useToast } from "@/hooks/use-toast";
 
 // Main App component
 const App = () => {
-  useToast(); // Remove unused toast variable
-
   // Set up smooth scrolling behavior
   useEffect(() => {
-    document.documentElement.style.scrollBehavior = "smooth";
-    
     // Handle anchor links for smooth scrolling
     const handleAnchorClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       const anchor = target.closest('a[href^="#"]');
-      
+
       if (anchor) {
         e.preventDefault();
-        const targetId = anchor.getAttribute('href');
-        if (targetId && targetId !== '#') {
+        const targetId = anchor.getAttribute("href");
+        if (targetId && targetId !== "#") {
           const element = document.querySelector(targetId);
           if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
+            element.scrollIntoView({ behavior: "smooth" });
           }
         }
       }
     };
 
-    document.addEventListener('click', handleAnchorClick);
-    
+    document.addEventListener("click", handleAnchorClick);
+
     return () => {
-      document.removeEventListener('click', handleAnchorClick);
-      document.documentElement.style.scrollBehavior = "";
+      document.removeEventListener("click", handleAnchorClick);
     };
   }, []);
 
   return (
-    <>
+    <div className="relative min-h-screen">
+      {/* Layered background effects */}
+      <AnimatedBackground />
+      <ParticleBackground />
+
+      {/* Scroll progress indicator */}
+      <ScrollProgress />
+
+      {/* Navigation */}
       <Header />
-      <MobileMenu />
-      <main>
+
+      {/* Main content */}
+      <main className="relative z-10">
         <Hero />
         <About />
         <Projects />
         <Contact />
       </main>
+
+      {/* Footer */}
       <Footer />
+
+      {/* Toast notifications */}
       <Toaster />
-    </>
+    </div>
   );
-}
+};
 
 export default App;

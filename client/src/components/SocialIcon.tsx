@@ -1,8 +1,8 @@
-import { 
-  FaFacebookF, 
-  FaTwitter, 
-  FaLinkedinIn, 
-  FaInstagram, 
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaLinkedinIn,
+  FaInstagram,
   FaGithub,
   FaPhone,
   FaCommentDots
@@ -14,63 +14,54 @@ interface SocialIconProps {
 }
 
 export function SocialIcon({ platform, url }: SocialIconProps) {
-  // Define platform specific settings
   const getIconSettings = () => {
     switch (platform.toLowerCase()) {
-      case 'facebook':
-        return { 
-          icon: <FaFacebookF />, 
-          bgColor: 'bg-[#1877F2]' 
-        };
-      case 'twitter':
-        return { 
-          icon: <FaTwitter />, 
-          bgColor: 'bg-[#1DA1F2]' 
-        };
-      case 'linkedin':
-        return { 
-          icon: <FaLinkedinIn />, 
-          bgColor: 'bg-[#0A66C2]' 
-        };
-      case 'instagram':
-        return { 
-          icon: <FaInstagram />, 
-          bgColor: 'bg-[#E4405F]' 
-        };
-      case 'github':
-        return { 
-          icon: <FaGithub />, 
-          bgColor: 'bg-[#333333]' 
-        };
-      case 'zalo':
-        return {
-          icon: <FaCommentDots />,
-          bgColor: 'bg-[#0068FF]'
-        };
-      case 'phone':
-        return {
-          icon: <FaPhone />,
-          bgColor: 'bg-[#25D366]'
-        };
+      case "facebook":
+        return { icon: <FaFacebookF />, color: "#1877F2" };
+      case "twitter":
+        return { icon: <FaTwitter />, color: "#1DA1F2" };
+      case "linkedin":
+        return { icon: <FaLinkedinIn />, color: "#0A66C2" };
+      case "instagram":
+        return { icon: <FaInstagram />, color: "#E4405F" };
+      case "github":
+        return { icon: <FaGithub />, color: "#8B5CF6" };
+      case "zalo":
+        return { icon: <FaCommentDots />, color: "#0068FF" };
+      case "phone":
+        return { icon: <FaPhone />, color: "#25D366" };
       default:
-        return { 
-          icon: <FaLinkedinIn />, 
-          bgColor: 'bg-primary' 
-        };
+        return { icon: <FaLinkedinIn />, color: "#8B5CF6" };
     }
   };
 
-  const { icon, bgColor } = getIconSettings();
+  const { icon, color } = getIconSettings();
 
   return (
-    <a 
-      href={url} 
-      className={`w-10 h-10 flex items-center justify-center ${bgColor} text-white rounded-full hover:opacity-90 transition-opacity duration-200`}
+    <a
+      href={url}
+      className="group relative w-10 h-10 flex items-center justify-center glass rounded-full text-muted-foreground hover:text-white transition-all duration-300 hover:scale-110"
       aria-label={platform}
+      title={platform}
       target="_blank"
       rel="noopener noreferrer"
+      style={
+        {
+          "--icon-color": color,
+        } as React.CSSProperties
+      }
     >
-      {icon}
+      {/* Hover glow */}
+      <div
+        className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        style={{
+          background: `${color}20`,
+          boxShadow: `0 0 20px ${color}30`,
+        }}
+      />
+      <span className="relative z-10 text-sm group-hover:text-white transition-colors duration-300">
+        {icon}
+      </span>
     </a>
   );
 }
