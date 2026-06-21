@@ -22,9 +22,9 @@ import { Send, CheckCircle } from "lucide-react";
 // 2. Tạo Email Service (kết nối Gmail của bạn)
 // 3. Tạo Email Template với các variables: {{from_name}}, {{from_email}}, {{subject}}, {{message}}
 // 4. Copy Service ID, Template ID và Public Key vào đây:
-const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";   // VD: "service_abc123"
-const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID"; // VD: "template_xyz789"
-const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";    // VD: "AbCdEfGhIjKlMnOp"
+const EMAILJS_SERVICE_ID = "service_qm2b0um";   // VD: "service_abc123"
+const EMAILJS_TEMPLATE_ID = "template_hf40268"; // VD: "template_xyz789"
+const EMAILJS_PUBLIC_KEY = "nsSBC7QlRh9EdnO2W";    // VD: "AbCdEfGhIjKlMnOp"
 // ============================================================
 
 // Contact form schema
@@ -153,9 +153,8 @@ export function Contact() {
             {/* Contact Info */}
             <div
               ref={infoRef}
-              className={`lg:col-span-2 space-y-6 transition-all duration-700 ${
-                infoRevealed ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              }`}
+              className={`lg:col-span-2 space-y-6 transition-all duration-700 ${infoRevealed ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                }`}
             >
               <h3 className="text-xl font-bold text-foreground mb-6">
                 Contact Information
@@ -219,9 +218,8 @@ export function Contact() {
             {/* Contact Form */}
             <div
               ref={formRef}
-              className={`lg:col-span-3 transition-all duration-700 delay-200 ${
-                formRevealed ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              }`}
+              className={`lg:col-span-3 transition-all duration-700 delay-200 ${formRevealed ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                }`}
             >
               <div className="glass rounded-2xl p-6 md:p-8 relative overflow-hidden">
                 {/* Success animation overlay */}
