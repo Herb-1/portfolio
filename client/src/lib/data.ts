@@ -27,6 +27,10 @@ export const personalInfo = {
     {
       platform: "Instagram",
       url: "https://www.instagram.com/quts.deraz"
+    },
+    {
+      platform: "GitHub",
+      url: "https://github.com/Herb-1"
     }
   ],
   stats: [
